@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
     <title> Ballot </title>
     <style>
+        body{
+            font-family: Georgia, Times, 'Times New Roman', serif;
+        }
         .nav {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -14,6 +17,7 @@
             align-items: center;
             padding: 20px;
             z-index: 100;
+            height: 50px;
           }
           
           .logo img {
@@ -47,12 +51,12 @@
 
           .center{
             position: absolute;
-            top: 15%;
+            margin-top: 150px;
             left:50%;
             transform: translate(-50%, -50%);
             width: 80%;
-            max-width: 800px;
             text-align: center;
+            height: auto;
           }
 
           .whitetext{
@@ -61,20 +65,46 @@
 
           .custom-ballot{
             position: absolute;
-            padding:20%;
-            top: 100%;
-            left: 0%;
-            width: 100%;
-            height: 00px;
-            max-width: 800px;
+            margin-top: 450px;
+            height: auto;
+            padding: 40px;
+            box-sizing: border-box;
+            width: 800px;
             background-color: #D9D9D9;
+          }
+
+          .form{
+            text-align: left;
+          }
+          #create-submit{
+            font-family: Georgia;
+            font-size: large;
+            float: right;
+            padding: 10px 20px;
+            background-color: rgba(123, 35, 35, 0.757);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+          }
+          #answ-button{
+            font-family: Georgia;
+            padding: 10px 20px;
+            background-color: #4f658e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+
           }
     </style>
 </head>
 
 
 <body style="background: rgba(123, 35, 35, 0.757)">
-    <!-------------------------------NAvigation Starts------------------>
+    <!-------------------------------Navigation Starts------------------>
 
     <nav class="nav" style=" background-color: #4f658e;">
         <div class="logo">
@@ -87,11 +117,59 @@
     </nav>
 
     <!---------------------------------------------Ends navigation------------------------------>
+
 <div class="center">
     <h1 class="whitetext">Create your own ballot</h1>
     <h4 class="whitetext">Fill out the following information to customize your ballot. Click "Create" and copy the link to share!</h4>
-    <div class="custom-ballot ">
+    <div class="custom-ballot center">
+        <form class="form">
+            <p>First, authenticate your identity.</p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
 
+            <p>Customize your ballot bellow.</p>
+            <label for="title">Title:</label>
+            <textarea id="title" name="title" rows="1" cols="50"></textarea><br><br>
+          
+            <label for="question">Question:</label><br>
+            <textarea id="question" name="question" rows="5" cols="50"></textarea><br><br>
+            <div id="answers">
+                <label for="answer1">Answer 1:</label><br>
+                <textarea id="answer1" name="answer1" rows="2" cols="50"></textarea><br><br>
+            
+                <label for="answer2">Answer 2:</label><br>
+                <textarea id="answer2" name="answer2" rows="2" cols="50"></textarea><br><br>
+            </div>
+            <button id="answ-button" type="button" onclick="addAnswer()">+ Add Answer</button><br><br>
+            
+            <label for="addinfo">Add any additional information here:</label><br>
+            <textarea id="addinfo" name="addinfo" rows="5" cols="50"></textarea><br><br>
+            
+            <p>Check one:</p>
+            <p style="font-size:small">(private ballots can only be accessed with a unique link)</p>
+            <label>
+                <input type="radio" name="option" value="option1">
+                Public
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="option" value="option2">
+                Private
+              </label><br><br>
+
+            <input id="create-submit" type="submit" value="Submit">
+          </form>
+          
+          <script>
+            function addAnswer() {
+              var div = document.createElement("div");
+              div.innerHTML = '<label for="answer">Additional Answer: </label><br><textarea id="answer" name="answer" rows="2" cols="50"></textarea><br><br>';
+              document.getElementById("answers").appendChild(div);
+            }
+          </script>
     </div>
 </div>
 
