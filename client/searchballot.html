@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
+    <title> Create Ballot </title>
+    <style>
+        body{
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            background: #A8C1CE;
+        }
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            z-index: 100;
+            height: 50px;
+          }
+          
+          .logo img {
+            height: 40px;
+          }
+          
+          .nav-links {
+            left:50%;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+          }
+          
+          .nav-links li {
+            margin: 0 10px;
+          }
+          
+          .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+          }
+          
+          .nav-links a:hover {
+            color: #8999d7;
+          }
+
+          .center{
+            position: absolute;
+            margin-top: 150px;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+            height: auto;
+          }
+
+          .whitetext{
+            color: #ffffff;
+          }
+
+          .search-big-div{
+            background:rgba(44, 71, 47, 0.69);
+            height: auto;
+            margin-top: 200px;
+            padding: 20px;
+          }
+          .form{
+            text-align: left;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 20px;
+          }
+          #search-submit{
+            font-family: Georgia;
+            font-size: large;
+            float: right;
+            padding: 10px 20px;
+            background-color:rgba(151, 89, 89, 0.908);
+            color: white;
+            border: none;
+            border-radius: 35px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+          }
+          #link{
+            width: 90%;
+            height: 30px;
+          }
+
+          
+    </style>
+</head>
+
+
+<body>
+    <!-------------------------------Navigation Starts------------------>
+
+    <nav class="nav" style=" background-color: #4f658e;">
+        <div class="logo">
+          <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+          <li><a href="createballot.html">Make a ballot</a></li>
+          <li><a href="searchballot.html">Find a ballot</a></li>
+        </ul>
+    </nav>
+
+    <!---------------------------------------------Ends navigation------------------------------>
+
+<div class="center">
+    <div class="search-big-div center whitetext">
+      <h1 >Search for an existing ballot</h1>
+      <h4 >You will need to input either a link (provided by owner of the ballot) or the title of the ballot you want to vote in.</h4>
+      <form class="form">
+        <h2>With a link:</h2>
+        <input type="text" id="link" name="link">
+       
+        <h2>Title of ballot:</h2>
+        <input type="text" id="link" name="link"><br><br><br><br>
+        <input id="search-submit" type="submit" value="Search"><br><br>
+
+      </form>
+    </div>
+</div>
+
+
+
+
+</body>
+
+
+
+</html>

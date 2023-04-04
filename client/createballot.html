@@ -7,6 +7,7 @@
     <style>
         body{
             font-family: Georgia, Times, 'Times New Roman', serif;
+            background: rgba(123, 35, 35, 0.757);
         }
         .nav {
             position: absolute;
@@ -48,7 +49,10 @@
           .nav-links a:hover {
             color: #8999d7;
           }
-
+          .custom-title{
+            position: absolute;
+            margin-top: 200px; 
+          }
           .center{
             position: absolute;
             margin-top: 150px;
@@ -62,16 +66,11 @@
           .whitetext{
             color: #ffffff;
           }
-
-          .custom-title{
-            position: absolute;
-            margin-top: 0px; 
-          }
           .custom-ballot{
             position: absolute;
-            margin-top: 500px;
+            margin-top: 700px;
             height: auto;
-            padding: 40px;
+            padding: 30px;
             box-sizing: border-box;
             width: 800px;
             background-color: #D9D9D9;
@@ -79,6 +78,8 @@
 
           .form{
             text-align: left;
+            margin-left: 40px ;
+            margin-right: 40px ;
           }
           #create-submit{
             font-family: Georgia;
@@ -107,7 +108,7 @@
 </head>
 
 
-<body style="background: rgba(123, 35, 35, 0.757)">
+<body>
     <!-------------------------------Navigation Starts------------------>
 
     <nav class="nav" style=" background-color: #4f658e;">
@@ -115,14 +116,14 @@
           <img src="logo.png" alt="Logo">
         </div>
         <ul class="nav-links">
-          <li><a href="ballot.html">Make a ballot</a></li>
-          <li><a href="search.html">Find a ballot</a></li>
+          <li><a href="createballot.html">Make a ballot</a></li>
+          <li><a href="searchballot.html">Find a ballot</a></li>
         </ul>
     </nav>
 
     <!---------------------------------------------Ends navigation------------------------------>
 
-<div class="center">
+<div class="parent-center">
     <div class="custom-title center">
       <h1 class="whitetext">Create your own ballot</h1>
       <h4 class="whitetext">Fill out the following information to customize your ballot. Click "Create" and copy the link to share!</h4>
