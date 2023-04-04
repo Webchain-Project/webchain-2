@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
-    <title> Ballot </title>
+    <title> Create Ballot </title>
     <style>
         body{
             font-family: Georgia, Times, 'Times New Roman', serif;
@@ -63,9 +63,13 @@
             color: #ffffff;
           }
 
+          .custom-title{
+            position: absolute;
+            margin-top: 0px; 
+          }
           .custom-ballot{
             position: absolute;
-            margin-top: 450px;
+            margin-top: 500px;
             height: auto;
             padding: 40px;
             box-sizing: border-box;
@@ -119,8 +123,10 @@
     <!---------------------------------------------Ends navigation------------------------------>
 
 <div class="center">
-    <h1 class="whitetext">Create your own ballot</h1>
-    <h4 class="whitetext">Fill out the following information to customize your ballot. Click "Create" and copy the link to share!</h4>
+    <div class="custom-title center">
+      <h1 class="whitetext">Create your own ballot</h1>
+      <h4 class="whitetext">Fill out the following information to customize your ballot. Click "Create" and copy the link to share!</h4>
+    </div>
     <div class="custom-ballot center">
         <form class="form">
             <p>First, authenticate your identity.</p>
@@ -169,46 +175,13 @@
               div.innerHTML = '<label for="answer">Additional Answer: </label><br><textarea id="answer" name="answer" rows="2" cols="50"></textarea><br><br>';
               document.getElementById("answers").appendChild(div);
             }
+            //Function to save ballot to blockchain
+            function saveBallot(){
+              //use button line 163 with id="create-submit"
+            }
           </script>
     </div>
 </div>
-
-<div class = "Ballot form">
-
-
-
-<div class = "Voteform">
-
-
-    <form>
-
-    <label for-
-
-
-    </form>
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
 
 
 
