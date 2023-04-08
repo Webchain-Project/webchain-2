@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
+    <title> Ballot Ready </title>
+    <style>
+        body{
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            background: rgba(123, 35, 35, 0.757);
+        }
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            z-index: 100;
+            height: 50px;
+          }
+          
+          .logo img {
+            height: 40px;
+          }
+          
+          .nav-links {
+            left:50%;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+          }
+          
+          .nav-links li {
+            margin: 0 10px;
+          }
+          
+          .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+          }
+          
+          .nav-links a:hover {
+            color: #8999d7;
+          }
+          .custom-title{
+            position: absolute;
+            margin-top: 200px; 
+          }
+          .center{
+            position: absolute;
+            margin-top: 150px;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            text-align: center;
+            height: auto;
+            
+          }
+
+          .whitetext{
+            color: #ffffff;
+          }
+          .custom-ballot{
+            position: absolute;
+            margin-top: 700px;
+            height: auto;
+            padding: 30px;
+            box-sizing: border-box;
+            width: 800px;
+            background-color: #D9D9D9;
+            border-radius: 5px;
+          }
+          .sharing-div{
+            position: absolute;
+            box-sizing: border-box;
+            width: 900px;
+            background-color: #D9D9D9;
+            margin-top: 410px;
+            text-align: left;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-right: 40px;
+            height: 430px;
+          }
+          .sharing2{
+            margin-top: 150px;
+            position: relative;
+            padding-left: 30px;
+            text-align: left;
+          }
+          #link{
+            font-family: Georgia;
+            font-size: large;
+            float: right;
+            padding: 10px 20px;
+            background-color: rgba(123, 35, 35, 0.757);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+          }
+
+          .results-div{
+            position: absolute;
+            box-sizing: border-box;
+            width: 900px;
+            background-color: #D9D9D9;
+            margin-top: 720px;
+            text-align: left;
+            padding-left: 50px;
+            padding-top: 20px;
+            padding-right: 40px;
+            height: 140px;
+          }
+
+    </style>
+</head>
+
+
+<body>
+    <!-------------------------------Navigation Starts------------------>
+
+    <nav class="nav" style=" background-color: #4f658e;">
+        <div class="logo">
+          <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+          <li><a href="createballot.html">Make a ballot</a></li>
+          <li><a href="searchballot.html">Find a ballot</a></li>
+        </ul>
+    </nav>
+
+    <!---------------------------------------------Ends navigation------------------------------>
+
+<div class="parent-center">
+    <div class="custom-title center">
+      <h1 class="whitetext">Your customized ballot is ready!</h1>
+    </div>
+    <div class="sharing-div center">
+        <h2>How will people vote?</h2>
+        <p>Someone can access this ballot by searching in the "Find a ballot" page, using the following information:</p>
+        
+        <div class="sharing2 center">
+            <h2>Search with link:</h2>
+            <p">Anyone with access to this link can vote in your ballot.</p>
+            <input id="link" type="submit" value="Copy link!"><br><br>
+            <h2>Search with title (public ballot only):</h2>
+            <p>Anyone can vote in your ballot by searching with this title </p>
+            <input id="link" type="submit" value="Title of ballot">
+        </div> 
+    </div>
+    <div class="results-div center">
+        <h2>How can you see the results?</h2>
+        <p>TBA</p>
+    </div>
+</div>
+
+
+
+
+</body>
+
+
+
+</html>
