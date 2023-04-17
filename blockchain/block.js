@@ -14,6 +14,10 @@ class block{
         return SHA256(this.index + this.previousHash + this.timestamp + this.pollname + this.ip);
     }
 
+    saveInDB(){
+        //Function to save block data in database
+    }
+
 }
 
 class blockchain{
